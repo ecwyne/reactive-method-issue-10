@@ -1,5 +1,5 @@
 # reactive-method-issue-10
-reproduction for simple:reactive-method issue number 10
+reproduction for [simple:reactive-method issue number 10](https://github.com/stubailo/meteor-reactive-method/issues/10)
 
 Found live at http://reactive-method-issue-10.meteor.com
 
