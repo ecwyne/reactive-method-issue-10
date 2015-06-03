@@ -13,12 +13,8 @@ if (Meteor.isClient) {
 
   Template.hello.events({
     'click button': function (){
-      console.log('before', ReactiveMethod._computations["[\"someMethod\",[\"a\"]]"]);
-      ReactiveMethod.invalidateCall('someMethod', 'a');
-      console.log('after', ReactiveMethod._computations["[\"someMethod\",[\"a\"]]"]);
-      setTimeout(function (){
-        console.log('after-recompute', ReactiveMethod._computations["[\"someMethod\",[\"a\"]]"]);
-      }, 3000);
+      delete ReactiveMethod._computations["[\"someMethod\",[\"a\"]]"][0]._reactiveMethodData["[\"someMethod\",[\"a\"]]"]
+      ReactiveMethod._computations["[\"someMethod\",[\"a\"]]"][0]._compute();
     }
   });
 }
