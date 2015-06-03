@@ -1,0 +1,19 @@
+<head>
+	<title>invalidate-example</title>
+</head>
+
+<body>
+	<h1>Welcome to Meteor!</h1>
+
+	{{> hello}}
+
+</body>
+
+<template name="hello">
+	<button>invalidate</button>
+	<ul>
+		{{#each records}}
+		<li>{{reactiveRecord}}</li>
+		{{/each}}
+	</ul>
+</template>
